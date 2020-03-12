@@ -11,7 +11,7 @@ public class Main {
 
         Person ivanov = null;
         Person smith = null;
-
+// test1//
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
