@@ -13,6 +13,17 @@ package ru.avalon.java.dev.j10.labs.models;
  */
 public class Person {
 
+    public String name;
+    public String familia;
+    public String otch;
+    public String secName;
+       
+      public Person(String name, String familia, String otch, String secName) {
+            this.name = name;
+            this.familia = familia;
+            this.otch = otch;
+            this.secName = secName;
+                                }
     /**
      * Возврвщает полное имя человека.
      * <p>
@@ -31,10 +42,12 @@ public class Person {
      * @return имя человека в виде строки.
      */
     public String getFullName() {
+        return name + familia + otch + secName;
+        
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
-        return null;
+        //return null;
     }
 
     /**
