@@ -15,8 +15,34 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+public class Passport {
 
+    public String dataPasp;
+    public String name;
+    public String familia;
+    public String otch;
+    public String secName;
+    public String dataVid;
+    public String organVid;
+    
+        public Passport(String dataPasp, String name, String familia, String otch, String secName, String dataVid, String organVid) {
+            
+            this.dataPasp = dataPasp;
+            this.name = name;
+            this.familia = familia;
+            this.otch = otch;
+            this.secName = secName;
+            this.dataVid = dataVid;
+            this.organVid = organVid;
+            
+                
+                }
+             public String getFullInfo() {
+                 return dataPasp + name + familia + otch + secName + dataVid + organVid;
+             }
+             public String getName() {
+                        return name;  
+        }
     /*
      * TODO(Студент): Закончить определение класса.
      *
