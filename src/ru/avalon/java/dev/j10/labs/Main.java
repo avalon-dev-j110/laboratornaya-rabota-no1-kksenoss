@@ -7,7 +7,9 @@ public class Main {
     /*
      * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
      */
-    Main() {
+    public static void main(String args[]) {
+        
+        System.out.println("тестовый вывод");
 
         Person ivanov = null;
         Person smith = null;
