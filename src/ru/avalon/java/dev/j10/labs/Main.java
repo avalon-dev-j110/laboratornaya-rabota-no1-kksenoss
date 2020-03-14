@@ -1,7 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.models.Person;
-
+import ru.avalon.java.dev.j10.labs.models.Passport;
 public class Main {
 
     /*
@@ -11,8 +11,15 @@ public class Main {
         
         System.out.println("тестовый вывод");
 
-        Person ivanov = null;
-        Person smith = null;
+        Person ivanov = new Person("Ivan", " Ivanov", " Ivanovich", " K");
+        String fullDataIvanov = ivanov.getFullName();
+        
+        Person smith = new Person("John ", "Edvard ", "Smith ", "T");
+        String fullDatSmith = smith.getFullName();  
+            
+        System.out.println(fullDataIvanov);
+        System.out.println(fullDatSmith);
+        //System.out.println(name);
 // test1//
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
