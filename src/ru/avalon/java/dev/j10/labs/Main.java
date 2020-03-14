@@ -2,6 +2,9 @@ package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.models.Person;
 import ru.avalon.java.dev.j10.labs.models.Passport;
+import ru.avalon.java.dev.j10.labs.commons.Address;
+
+
 public class Main {
 
     /*
@@ -11,14 +14,29 @@ public class Main {
         
         System.out.println("тестовый вывод");
 
-        Person ivanov = new Person("Ivan", " Ivanov", " Ivanovich", " K");
-        String fullDataIvanov = ivanov.getFullName();
+        Person ivanov = new Person("Ivan", "Ivanov", "Ivanovich", "K"); //созд оъекта с 1 методом
+        String fullDataIvanov = ivanov.getFullName1();
         
-        Person smith = new Person("John ", "Edvard ", "Smith ", "T");
-        String fullDatSmith = smith.getFullName();  
+        Person smith = new Person("John", "Edvard", "Smith ", "T"); //созд оъекта с 1 методом
+        String fullDataSmith = smith.getFullName1();  
+        
+        Person john = new Person("John" , "Doe", " ", "J"); //созд оъекта с 2 методом
+        String fullDataDoe = john.getFullName2();
             
         System.out.println(fullDataIvanov);
-        System.out.println(fullDatSmith);
+        System.out.println(fullDataSmith);
+        System.out.println(fullDataDoe);
+        
+        Address men = new Address("Russia", "Moscow", "Lenina", "9", "4" , "111222");
+        String fullAddress = men.getFullAddress();
+        
+        
+        System.out.println(fullAddress);
+        
+        //создать метод - возвр имя + адрес
+        
+        
+        
         //System.out.println(name);
 // test1//
         /*

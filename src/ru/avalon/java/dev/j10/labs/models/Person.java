@@ -18,11 +18,11 @@ public class Person {
     public String otch;
     public String secName;
        
-      public Person(String name, String familia, String otch, String secName) {
-            this.name = name;
-            this.familia = familia;
-            this.otch = otch;
-            this.secName = secName;
+      public Person(String name, String familia, String otch, String secName) { //конструктор с параметрами( надо создать второй с уменьшенным количеством параметров?)
+            this.name = name + " ";
+            this.familia = familia + " ";
+            this.otch = otch + " ";
+            this.secName = secName + " ";
                                 }
     /**
      * Возврвщает полное имя человека.
@@ -30,7 +30,7 @@ public class Person {
      * Если у человека есть Имя, Фамилия и Отчество, то
      * возвращет Имя, Фимилию и Отчество, разделённые пробелом.
      * <p>
-     * Если у человека нет Отчества, но есть второе имя, то
+     * Если у человека нет Отчества, но есть второе имя, то    - Разработка нового метода > массив > 1й элемент массива? поиск готового метода ?
      * возвращает Имя, Первую букву второго имени, и Фамилию,
      * разделённые пробелом. После Инициала второго имени
      * должна стоять точка. Например, "Джером К. Джером".
@@ -41,14 +41,17 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-    public String getFullName() {
-        return name + familia + otch + secName;
-        
+    public String getFullName1() {
+        return name + familia + otch; 
+    }
+     public String getFullName2() {
+        return name + secName +familia; 
+    }
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
         //return null;
-    }
+    
 
     /**
      * Возвращает адрес, по которому проживает человек.
