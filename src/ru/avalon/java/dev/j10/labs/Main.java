@@ -14,23 +14,28 @@ public class Main {
         
         System.out.println("тестовый вывод");
 
-        Person ivanov = new Person("Ivan", "Ivanov", "Ivanovich", "K"); //созд оъекта с 1 методом
+        Person ivanov = new Person("Ivan", "Ivanov", "Ivanovich", "ch"); //созд оъекта с 1 методом И Ф О -ввод лишний переменных, надо откорр
         String fullDataIvanov = ivanov.getFullName1();
         
-        Person smith = new Person("John", "Edvard", "Smith ", "T"); //созд оъекта с 1 методом
-        String fullDataSmith = smith.getFullName1();  
+        Person smith = new Person("John", "Edvard", "Smith ", "Isdsdich"); //созд оъекта с 2 методом И 2И Ф -ввод лишний переменных, надо откорр
+        String fullDataSmith = smith.getFullName2();  
         
-        Person john = new Person("John" , "Doe", " ", "J"); //созд оъекта с 2 методом
-        String fullDataDoe = john.getFullName2();
+        Person john = new Person("John" , "Doe", "Jack", "Iasasdh"); //тестовый
+        String fullNameDoe = john.getFullName2();
+        
+        Person sara = new Person("Sara" , "Black", "Ivsaddiasch", "Iasdasdwvich"); //созд оъекта с 3 методом И Ф -ввод лишний переменных, надо откорр
+        String fullNameSara = sara.getFullName3();
             
         System.out.println(fullDataIvanov);
         System.out.println(fullDataSmith);
-        System.out.println(fullDataDoe);
+        
+        System.out.println(fullNameDoe);
+        System.out.println(fullNameSara);
         
         Address men = new Address("Russia", "Moscow", "Lenina", "9", "4" , "111222");
         String fullAddress = men.getFullAddress();
         
-        
+        //
         System.out.println(fullAddress);
         
         //создать метод - возвр имя + адрес
