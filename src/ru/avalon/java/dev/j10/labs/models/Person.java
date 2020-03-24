@@ -17,36 +17,55 @@ public class Person {
     public String familia;
     public String otch;
     public String secName;
-       
-      public Person(String name, String familia, String otch, String secName) { //конструктор с параметрами( надо создать второй с уменьшенным количеством параметров?)
+    /*public String shortSecName[];         Переменные для массива
+    public String firstSumb;
+    */
+        public Person(String name, String familia, String otch, String secName) { //конструктор с параметрами( надо создать второй с уменьшенным количеством параметров?)
             this.name = name + " ";
             this.familia = familia + " ";
             this.otch = otch + " ";
-            this.secName = secName + " ";
+            this.secName = secName.charAt(0) + ". ";
                                 }
-    /**
+ 
+    public String getFullName1() {
+        return name + familia + otch; 
+    }
+ 
+    public String getFullName2() {
+        return name + secName +familia; 
+    }
+
+    public  String getFullName3() {
+        return name +familia; 
+    }                
+/*  Вариант с переводжом строчного имени в массив, вывод 1 симв, вариант пока не рабочий
+     
+     public void toArrey() {
+            char[] shortSecName = secName.toCharArray();
+                            this.shortSecName =shortSecName;
+                                   
+                                   }
+        public char firtSumb = shortSecName.substring(int 0);
+        */
+                   
+      /**
      * Возврвщает полное имя человека.
      * <p>
-     * Если у человека есть Имя, Фамилия и Отчество, то
+     *+   Если у человека есть Имя, Фамилия и Отчество, то
      * возвращет Имя, Фимилию и Отчество, разделённые пробелом.
      * <p>
-     * Если у человека нет Отчества, но есть второе имя, то    - Разработка нового метода > массив > 1й элемент массива? поиск готового метода ?
+     *+  Если у человека нет Отчества, но есть второе имя, то 
      * возвращает Имя, Первую букву второго имени, и Фамилию,
      * разделённые пробелом. После Инициала второго имени
      * должна стоять точка. Например, "Джером К. Джером".
      * <p>
-     * Если у человека нет ни Отчества ни Второго имени, а
+     *-  Если у человека нет ни Отчества ни Второго имени, а
      * есть только Имя и Фамилия, то возвращает их, разделённые
      * пробелом.
      *
      * @return имя человека в виде строки.
      */
-    public String getFullName1() {
-        return name + familia + otch; 
-    }
-     public String getFullName2() {
-        return name + secName +familia; 
-    }
+    //------- создание перегруженного метода 
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
