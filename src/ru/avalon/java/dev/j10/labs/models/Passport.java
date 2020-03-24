@@ -41,7 +41,10 @@ public class Passport {
                  return dataPasp + name + familia + otch + secName + dataVid + organVid;
              }
              public String getName() {
-                        return name;  
+                        return name + familia + otch;  
+        }
+              public String getName2() {
+                        return name + familia + secName;  
         }
     /*
      * TODO(Студент): Закончить определение класса.
