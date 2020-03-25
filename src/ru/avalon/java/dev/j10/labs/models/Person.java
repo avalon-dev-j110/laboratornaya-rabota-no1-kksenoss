@@ -17,6 +17,7 @@ public class Person {
     public String familia;
     public String otch;
     public String secName;
+    
     /*public String shortSecName[];         Переменные для массива
     public String firstSumb;
     */
@@ -38,6 +39,7 @@ public class Person {
     public  String getFullName3() {
         return name +familia; 
     }                
+
 /*  Вариант с переводжом строчного имени в массив, вывод 1 симв, вариант пока не рабочий
      
      public void toArrey() {
