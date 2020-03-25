@@ -35,4 +35,10 @@ public class Address {
          public String getFullAddress() {                  // возвращает полный адрес
                 return country + city + street + building + room + indeks;
          }
+          public String getFullAddress2() {                  // возвращает полный адрес
+                return country + city + street + building + room + indeks;
+         }
+          public String getFullAddress3() {                  // возвращает полный адрес
+                return country + city + street + building + room + indeks;
+         }
 }
