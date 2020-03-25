@@ -11,33 +11,42 @@ public class Main {
      * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
      */
     public static void main(String args[]) {
-        
+                
         System.out.println("тестовый вывод");
 
         Person ivanov = new Person("Ivan", "Ivanov", "Ivanovich", "ch"); //созд оъекта с 1 методом И Ф О -ввод лишний переменных, надо откорр
         String fullDataIvanov = ivanov.getFullName1();
         
-        Person smith = new Person("John", "Edvard", "Smith ", "Isdsdich"); //созд оъекта с 2 методом И 2И Ф -ввод лишний переменных, надо откорр
+        Person smith = new Person("John", "Edvard", "Smith ", "Kent"); //созд оъекта с 2 методом И 2И Ф -ввод лишний переменных, надо откорр
         String fullDataSmith = smith.getFullName2();  
         
         Person john = new Person("John" , "Doe", "Jack", "Iasasdh"); //тестовый
         String fullNameDoe = john.getFullName2();
         
         Person sara = new Person("Sara" , "Black", "Ivsaddiasch", "Iasdasdwvich"); //созд оъекта с 3 методом И Ф -ввод лишний переменных, надо откорр
-        String fullNameSara = sara.getFullName3();
-            
+        String fullDataSara = sara.getFullName3();
+        
+                    
         System.out.println(fullDataIvanov);
         System.out.println(fullDataSmith);
         
         System.out.println(fullNameDoe);
-        System.out.println(fullNameSara);
+        System.out.println(fullDataSara);
         
-        Address men = new Address("Russia", "Moscow", "Lenina", "9", "4" , "111222");
-        String fullAddress = men.getFullAddress();
+        Address ivanovAddress = new Address("Russia", "Moscow", "Lenina", "9", "4" , "111222");
+        String fullAddress = ivanovAddress.getFullAddress();
         
-        //
-        System.out.println(fullAddress);
+        Address smithAddress = new Address("USA", "NY", "Bush str", "7", "4" , "65464654");
+        String fullAddress2 = smithAddress.getFullAddress2();
         
+        Address saraAddress = new Address("country", "city", "street", "building", "nomber" , "indecs");
+        String fullAddress3 = saraAddress.getFullAddress3();
+        
+        
+        System.out.println(fullDataIvanov + fullAddress);
+        System.out.println(fullDataSmith + fullAddress2);
+        System.out.println(fullDataSara + fullAddress3);
+      
         //создать метод - возвр имя + адрес
         
         
@@ -82,5 +91,9 @@ public class Main {
          * Значение каждой переменной должно быть выведено на
          * отдельной строке.
          */
+    }
+
+    private static void getFullAddress() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
