@@ -15,30 +15,62 @@ package ru.avalon.java.dev.j10.labs.commons;
  *    в классе.
  */
 public class Address {
-    public String country;
-    public String city;
-    public String street;
-    public String building;
-    public String room;
-    public String indeks;
+    private String country;
+    private String city;
+    private String street;
+    private String building;
+    private String room;
+    private String indeks;
     
          public Address(String country, String city, String street, String building, String room, String indeks) {
-             this.country = country + "/";
-             this.city = city + "/";
-             this.street = street + "/";
-             this.building = building + "/";
-             this.room = room + "/";
-             this.indeks = indeks + "/";
-             
-                         
+             this.country = country;
+             this.city = city;
+             this.street = street;
+             this.building = building;
+             this.room = room;
+             this.indeks = indeks;
+                                
          }
-         public String getFullAddress() {                  // возвращает полный адрес
-                return country + city + street + building + room + indeks;
-         }
-          public String getFullAddress2() {                  // возвращает полный адрес
-                return country + city + street + building + room + indeks;
-         }
-          public String getFullAddress3() {                  // возвращает полный адрес
-                return country + city + street + building + room + indeks;
-         }
+    public String getCountry() {
+        return country;
+    }
+    public void setCountry(String country) {
+        this.country = country;     
+    }     
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+    public String getStreet() {
+        return street;
+    }
+    public void setStreet(String street) {
+        this.street = street;
+    }
+    public String getBuilding() {
+        return building;
+    }
+    public void setBuilding(String building) {
+        this.building = building;
+    }        
+     public String getRoom() {
+        return room;
+    }
+    public void setRoom(String room) {
+        this.room = room;
+    }        
+     public String getIndeks() {
+        return indeks;
+    }
+    public void setindeks(String indeks) {
+        this.indeks = indeks;
+    }        
+    @Override
+          public String toString (){
+             return "Country " + getCountry() +  "City " + getCity() + "Street " 
+                     + getStreet() + "Building " + getBuilding() + "Room " + getRoom() + "Indeks " + getIndeks();
+    }     
+        
 }
