@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.models;
-
+import ru.avalon.java.dev.j10.labs.models.Passport;
+import ru.avalon.java.dev.j10.labs.commons.Address;
 /**
  * Представление о человеке.
  * <p>
@@ -13,43 +14,48 @@ package ru.avalon.java.dev.j10.labs.models;
  */
 public class Person {
 
-    public String name;
-    public String familia;
-    public String otch;
-    public String secName;
+    private String name;
+    private String familia;
+    private String otch;
+    private String secName; 
+    private Address address;
+    private Passport passport;
     
-    /*public String shortSecName[];         Переменные для массива
-    public String firstSumb;
-    */
-        public Person(String name, String familia, String otch, String secName) { //конструктор с параметрами( надо создать второй с уменьшенным количеством параметров?)
-            this.name = name + " ";
-            this.familia = familia + " ";
-            this.otch = otch + " ";
-            this.secName = secName.charAt(0) + ". ";
-                                }
- 
+        public Person(String name, String familia, String otch, Passport passport, Address address) { //конструктор с параметрами имя фам отч
+        this.name = name;
+        this.familia = familia;
+        this.otch = otch;
+        this.passport = passport;
+        this.address = address;
+        }
+        
+        public Person(String name, String familia, String secName, Passport passport, Address address) { //конструктор с параметрами имя фам отч
+        this.name = name;
+        this.familia = familia;
+        this.secName = otch;
+        this.passport = passport;
+        this.address = address;
+        }
+        
+        public Person(String name, String familia, Passport passport, Address registration) { //конструктор с параметрами имя фам отч
+        this.name = name;
+        this.familia = familia;
+        this.passport = passport;
+        this.address = address;
+        }               
     public String getFullName1() {
         return name + familia + otch; 
     }
  
     public String getFullName2() {
-        return name + secName +familia; 
+        return name + secName.charAt(0)+ '.' + familia; 
     }
 
     public  String getFullName3() {
         return name +familia; 
     }                
 
-/*  Вариант с переводжом строчного имени в массив, вывод 1 симв, вариант пока не рабочий
-     
-     public void toArrey() {
-            char[] shortSecName = secName.toCharArray();
-                            this.shortSecName =shortSecName;
-                                   
-                                   }
-        public char firtSumb = shortSecName.substring(int 0);
-        */
-                   
+
       /**
      * Возврвщает полное имя человека.
      * <p>
@@ -67,7 +73,7 @@ public class Person {
      *
      * @return имя человека в виде строки.
      */
-    //------- создание перегруженного метода 
+    // ------------------------ВЫПОЛНЕНО----------------
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
@@ -86,6 +92,6 @@ public class Person {
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
-    }
+    return null;
+}
 }
