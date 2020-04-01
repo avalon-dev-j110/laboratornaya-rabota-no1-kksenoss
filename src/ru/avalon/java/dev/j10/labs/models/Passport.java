@@ -1,5 +1,5 @@
 package ru.avalon.java.dev.j10.labs.models;
-
+import ru.avalon.java.dev.j10.labs.models.Person;
 /**
  * Представление о паспортных данных человека.
  * <p>
@@ -17,35 +17,56 @@ package ru.avalon.java.dev.j10.labs.models;
  */
 public class Passport {
 
-    public String dataPasp;
-    public String name;
-    public String familia;
-    public String otch;
-    public String secName;
-    public String dataVid;
-    public String organVid;
+    private String nombPasp;
+    private Person person;
+    private String dataRogd;
+    private String dataVid;
+    private String organVid;
     
-        public Passport(String dataPasp, String name, String familia, String otch, String secName, String dataVid, String organVid) {
+        public Passport(String nombPasp, Person person, String dataRogd, 
+                String dataVid, String organVid) {
             
-            this.dataPasp = dataPasp;
-            this.name = name;
-            this.familia = familia;
-            this.otch = otch;
-            this.secName = secName;
+            this.nombPasp = nombPasp;
+            this.person = person;
+            this.dataRogd = dataRogd;
             this.dataVid = dataVid;
             this.organVid = organVid;
-            
-                
-                }
-             public String getFullInfo() {
-                 return dataPasp + name + familia + otch + secName + dataVid + organVid;
-             }
-             public String getName() {
-                        return name + familia + otch;  
         }
-              public String getName2() {
-                        return name + familia + secName;  
-        }
+                    
+      
+    public String getNombPasp() {
+        return nombPasp;
+    }
+    public void setNombPasp(String nombPasp) {
+        this.nombPasp = nombPasp;
+    }
+    public String getDataRogd() {
+        return dataRogd;
+    }
+    public void setDataRogd(String DataRogd) {
+        this.dataRogd = dataRogd;
+    }
+    public String getDataVid() {
+        return dataVid;
+    }
+    public void setDataVid(String dataVid) {
+        this.dataVid = dataVid;
+    } 
+    public String getOrganVid() {
+        return organVid;
+    }
+    public void setOrganVid(String organVid) {
+        this.organVid = organVid;
+    }
+    @Override
+    public String toString() {
+        return "Номер паспорта " + getNombPasp() + "Дата рождения " 
+                + getDataRogd() + 
+                "Выдан " + getDataVid() + getOrganVid();
+    }
+}
+
+    //--------------------------------------------------------- 
     /*
      * TODO(Студент): Закончить определение класса.
      *
@@ -66,4 +87,4 @@ public class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
-}
+
