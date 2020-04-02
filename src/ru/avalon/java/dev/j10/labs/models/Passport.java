@@ -23,16 +23,21 @@ public class Passport {
     private String dataVid;
     private String organVid;
     
-        public Passport(String nombPasp, Person person, String dataRogd, 
-                String dataVid, String organVid) {
-            
-            this.nombPasp = nombPasp;
-            this.person = person;
-            this.dataRogd = dataRogd;
-            this.dataVid = dataVid;
-            this.organVid = organVid;
+        public Passport (Person person, String nombPasp, String dataRogd, 
+                String dataVid, String organVid){
+           
+           this(nombPasp, dataRogd, dataVid, organVid);
+           this.person = person;             
         }
-                    
+        
+       public Passport (String nombPasp, String dataRogd, 
+               String dataVid, String organVid) {
+                          
+           this.nombPasp = nombPasp;
+           this.dataRogd = dataRogd;
+           this.dataVid = dataVid;
+           this.organVid = organVid;
+        }
       
     public String getNombPasp() {
         return nombPasp;
@@ -60,9 +65,9 @@ public class Passport {
     }
     @Override
     public String toString() {
-        return "Номер паспорта " + getNombPasp() + "Дата рождения " 
+        return " Номер паспорта " + getNombPasp() + " Дата рождения " 
                 + getDataRogd() + 
-                "Выдан " + getDataVid() + getOrganVid();
+                " Выдан " + getDataVid() + getOrganVid();
     }
 }
 

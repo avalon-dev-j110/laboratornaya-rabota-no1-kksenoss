@@ -69,8 +69,8 @@ public class Address {
     }        
     @Override
           public String toString (){
-             return "Country " + getCountry() +  "City " + getCity() + "Street " 
-                     + getStreet() + "Building " + getBuilding() + "Room " + getRoom() + "Indeks " + getIndeks();
+             return " Cтрана " + getCountry() +  " Город " + getCity() + " Улица " 
+                     + getStreet() + " Здание " + getBuilding() + " Помещение " + getRoom() + " Индекс " + getIndeks();
     }     
         
 }

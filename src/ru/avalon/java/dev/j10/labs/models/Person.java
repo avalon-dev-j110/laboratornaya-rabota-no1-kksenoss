@@ -18,44 +18,78 @@ public class Person {
     private String familia;
     private String otch;
     private String secName; 
+    private String fullName;
     private Address address;
     private Passport passport;
     
-        public Person(String name, String familia, String otch, Passport passport, Address address) { //конструктор с параметрами имя фам отч
+        public Person(String name, String familia, String otch, String secName, Passport passport, Address address) { //конструктор с параметрами имя фам отч
         this.name = name;
         this.familia = familia;
         this.otch = otch;
+        this.secName = secName;
         this.passport = passport;
         this.address = address;
         }
-        
-        public Person(String name, String familia, String secName, Passport passport, Address address) { //конструктор с параметрами имя фам отч
-        this.name = name;
-        this.familia = familia;
-        this.secName = otch;
-        this.passport = passport;
-        this.address = address;
-        }
-        
-        public Person(String name, String familia, Passport passport, Address registration) { //конструктор с параметрами имя фам отч
+                  
+        public Person(String name, String familia, Passport passport, Address address) { //конструктор с параметрами имя фам отч
         this.name = name;
         this.familia = familia;
         this.passport = passport;
         this.address = address;
-        }               
-    public String getFullName1() {
-        return name + familia + otch; 
-    }
- 
-    public String getFullName2() {
-        return name + secName.charAt(0)+ '.' + familia; 
+        }   
+         
+        public String getName() {
+        return name;
     }
 
-    public  String getFullName3() {
-        return name +familia; 
-    }                
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getFamilia() {
+        return familia;
+    }
 
+    public void setFamilia(String familia) {
+        this.familia = familia;
+    }
+
+    public String getOtch() {
+        return otch;
+    }
+
+    public void setOtch(String otch) {
+        this.otch = otch;
+    }
+
+    public String getSecName() {
+        return secName;
+    }
+
+    public void setSecName(String secName) {
+        this.secName = secName;
+    }
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public void setPassport(Passport passport) {
+        this.passport = passport;
+    }
+
+                
+                
+        public String getfullName() {
+        if (this.otch == null && this.secName == null ) {
+            fullName = this.name + " " + this.familia;
+           }
+        else if (this.otch != null)
+           fullName = this.familia + " " + this.name + " " + this.otch;
+        else if (this.secName != null)
+           fullName = name + " " + secName.charAt(0) + ". " + familia;
+        return fullName;
+    }
       /**
      * Возврвщает полное имя человека.
      * <p>
@@ -88,10 +122,17 @@ public class Person {
      *
      * @return адрес регистрации в виде строки.
      */
-    public String getAddress() {
-        /*
-         * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
-         */
-    return null;
+    public Address getAddress() {
+        return address;
+        
 }
+    public void setAddress(Address address){
+        this.address = address;
+    }
+    
+    
+    @Override
+    public String toString (){
+        return getfullName() + passport + address;}
 }
+   

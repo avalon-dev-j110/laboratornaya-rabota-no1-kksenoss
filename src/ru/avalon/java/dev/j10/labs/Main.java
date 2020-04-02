@@ -13,41 +13,47 @@ public class Main {
     public static void main(String args[]) {
                 
         System.out.println("тестовый вывод");
-
         
         
-        Person ivanov = new Person("Ivan", "Ivanov", "Ivanovich"); //созд оъекта с 1 методом И Ф О -ввод лишний переменных, надо откорр
-        String nameIvanov = ivanov.getFullName1();
+        Address registration1 = new Address("РосСия", "СПб", "Непокоренных", "4", "201", "123456");
+        Passport passportDate1 = new Passport("122545", "20.01.1990", "11.12.1997", "УФМС Росии");
+        Person ivanov = new Person("Ivanov", "Ivan", "Ivanovich", null, passportDate1, registration1);
         
-        Person smith = new Person("John", "Smith", "Edvard"); //созд оъекта с 2 методом И 2И Ф -ввод лишний переменных, надо откорр
-        String nameSmith = smith.getFullName2();  
+        System.out.println(ivanov); 
         
-        Person john = new Person("John" , "Doe"); //тестовый
-        String nameDoe = john.getFullName3();
+        System.out.println(ivanov.getfullName());
         
-            
-                    
-        System.out.println(nameIvanov);
-        System.out.println(nameSmith);
-        System.out.println(nameDoe);
-                
-        Address ivanovAddress = new Address("Russia", "Moscow", "Lenina", "9", "4" , "111222");
-        String fullAddress = ivanovAddress.getFullAddress();
+        System.out.println(registration1);
         
-        Address smithAddress = new Address("USA", "NY", "Bush str", "7", "4" , "65464654");
-        String fullAddress2 = smithAddress.getFullAddress();
+        System.out.println(passportDate1);
         
-        Address doeAddress = new Address("country", "city", "street", "building", "nomber" , "indecs");
-        String fullAddress3 = doeAddress.getFullAddress();
+        System.out.println("----------------------------------------------------");
         
+        Address registration2 = new Address("США", "Вашингтон", "strrt", "3", "241", "12312321");
+        Passport passportDate2 = new Passport("654654", "12.12.90", "11.12.1998", "USA gov");
+        Person smith = new Person("John", "Smith", null , "Edward", passportDate2, registration2);
         
-        System.out.println(nameIvanov + "зарегистрирован " + fullAddress);
-        System.out.println(nameSmith + "зарегистрирован " + fullAddress2);
-        System.out.println(nameDoe + "зарегистрирован " + fullAddress3);
-      
-        //создать метод - возвр имя + адрес
+        System.out.println(smith); 
         
+        System.out.println(smith.getfullName());
         
+        System.out.println(registration2);
+        
+        System.out.println(passportDate2);
+        
+        System.out.println("----------------------------------------------------");
+              
+        Address registration3 = new Address("СтранаХ", "ГородХ", "УлицаХ", "ЗданиеХ", "помещениеХ", "ИндексХ");
+        Passport passportDate3 = new Passport("хххххх", "нн.нн.нннн", "нн.нн.нннн", "УФМС СтраныХ");
+        Person doe = new Person("John", "Doe", null, null, passportDate3, registration3);
+        
+        System.out.println(doe); 
+        
+        System.out.println(doe.getfullName());
+        
+        System.out.println(registration3);
+        
+        System.out.println(passportDate3);
         
         //System.out.println(name);
         /*
